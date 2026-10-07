@@ -1,0 +1,433 @@
+{
+  "phase1_10": {
+    "study": "F1 GPU Race Simulator ML Systems Performance Study",
+    "system": {
+      "python": "3.13.5",
+      "platform": "linux",
+      "cpu_count": 5,
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+      "torch": "2.10.0+cpu",
+      "cuda": false,
+      "cuda_backend_status": "CUDA driver/device unavailable",
+      "nvidia_smi": false
+    },
+    "simulation": [
+      {
+        "implementation": "python_cpu",
+        "status": "measured",
+        "simulations": 1000,
+        "runtime_s": 0.6964931339999936,
+        "throughput_sims_s": 1435.764333033625,
+        "latency_ms_per_sim": 0.6964931339999936,
+        "cpu_util_percent": 19.813547795864025,
+        "gpu_util_percent": null,
+        "gpu_memory_mb": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "numpy_cpu",
+        "status": "measured",
+        "simulations": 1000,
+        "runtime_s": 0.06971745600000645,
+        "throughput_sims_s": 14343.610013536745,
+        "latency_ms_per_sim": 0.06971745600000645,
+        "cpu_util_percent": 20.081054018951527,
+        "gpu_util_percent": null,
+        "gpu_memory_mb": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "cuda_optimized",
+        "status": "not_run",
+        "reason": "CUDA driver/device unavailable"
+      }
+    ],
+    "inference": [
+      {
+        "implementation": "pytorch_fp32",
+        "status": "measured",
+        "batch_size": 1,
+        "runtime_s": 2.541750399998932e-05,
+        "latency_ms": 0.02541750399998932,
+        "throughput_samples_s": 39342.96617010152,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_fp16",
+        "status": "measured",
+        "batch_size": 1,
+        "runtime_s": 3.137731199998939e-05,
+        "latency_ms": 0.03137731199998939,
+        "throughput_samples_s": 31870.161472096086,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_bf16",
+        "status": "measured",
+        "batch_size": 1,
+        "runtime_s": 3.326112600001352e-05,
+        "latency_ms": 0.03326112600001352,
+        "throughput_samples_s": 30065.127680872665,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 1,
+        "runtime_s": 2.4146740000077215e-05,
+        "latency_ms": 0.024146740000077216,
+        "throughput_samples_s": 41413.45788279504,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 8,
+        "runtime_s": 3.0313789999922846e-05,
+        "latency_ms": 0.030313789999922847,
+        "throughput_samples_s": 263906.29479257995,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 32,
+        "runtime_s": 3.557521000004726e-05,
+        "latency_ms": 0.035575210000047264,
+        "throughput_samples_s": 899502.7717322677,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 128,
+        "runtime_s": 5.228039000002127e-05,
+        "latency_ms": 0.05228039000002127,
+        "throughput_samples_s": 2448336.747295648,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 512,
+        "runtime_s": 9.273614999969482e-05,
+        "latency_ms": 0.09273614999969482,
+        "throughput_samples_s": 5521040.069074303,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 1024,
+        "runtime_s": 0.00013864579999989246,
+        "latency_ms": 0.13864579999989246,
+        "throughput_samples_s": 7385726.794470472,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      },
+      {
+        "implementation": "pytorch_batch_fp32",
+        "status": "measured",
+        "batch_size": 4096,
+        "runtime_s": 0.0007948522500001332,
+        "latency_ms": 0.7948522500001332,
+        "throughput_samples_s": 5153158.967593429,
+        "device": "cpu",
+        "gpu_memory_mb": null,
+        "gpu_util_percent": null,
+        "cpu_util_percent": null,
+        "energy_j": null
+      }
+    ],
+    "accuracy": [
+      {
+        "implementation": "pytorch_model",
+        "target": "expected_race_time",
+        "mae": 2509.876229794362,
+        "rmse": 2534.319853913431,
+        "status": "measured"
+      },
+      {
+        "implementation": "pytorch_model",
+        "target": "finishing_position",
+        "mae": 0.9863688196277335,
+        "rmse": 1.2269405895502314,
+        "status": "measured"
+      },
+      {
+        "implementation": "pytorch_model",
+        "target": "podium_probability",
+        "mae": 0.27468334627337754,
+        "rmse": 0.3537899412626536,
+        "status": "measured"
+      },
+      {
+        "implementation": "pytorch_model",
+        "target": "win_probability",
+        "mae": 0.2686875043436885,
+        "rmse": 0.3468610132056805,
+        "status": "measured"
+      },
+      {
+        "implementation": "xgboost_model",
+        "target": "expected_race_time",
+        "mae": 365.5795047087256,
+        "rmse": 465.50807316606614,
+        "status": "measured"
+      },
+      {
+        "implementation": "xgboost_model",
+        "target": "finishing_position",
+        "mae": 0.277860676293217,
+        "rmse": 0.3580553793044651,
+        "status": "measured"
+      },
+      {
+        "implementation": "xgboost_model",
+        "target": "podium_probability",
+        "mae": 0.0,
+        "rmse": 0.0,
+        "status": "measured"
+      },
+      {
+        "implementation": "xgboost_model",
+        "target": "win_probability",
+        "mae": 0.0,
+        "rmse": 0.0,
+        "status": "measured"
+      }
+    ],
+    "realtime": {
+      "status": "measured",
+      "repeats": 20,
+      "candidate_count": 16,
+      "simulations_per_candidate": 4,
+      "mean_stage_latency_ms": {
+        "state_processing_ms": 0.0006196500002886296,
+        "candidate_generation_ms": 2.5997385499998416,
+        "evaluation_ms": 77.88063030000245,
+        "ranking_ms": 0.039577600001194924,
+        "total_ms": 80.52056610000378
+      },
+      "target_total_ms": 100.0,
+      "target_met": true
+    },
+    "historical_optimization_ablation": [
+      {
+        "optimization": "conditional stochastic work",
+        "baseline_s": 0.07437215200002356,
+        "optimized_s": 0.044707016999836924,
+        "improvement_percent": 39.88967599885221,
+        "environment": "Numba CUDA simulator on CPU",
+        "hardware_gpu": false
+      },
+      {
+        "optimization": "persistent device configuration",
+        "baseline_bytes": 1536,
+        "optimized_bytes": 1072,
+        "bytes_reduction_percent": 30.20833333333333,
+        "component_time_reduction_percent": 72.58825801618804,
+        "environment": "Numba CUDA simulator on CPU",
+        "hardware_gpu": false
+      }
+    ],
+    "notes": [
+      "Missing GPU/Triton/ONNX/TensorRT measurements are represented as not_run; no values are fabricated.",
+      "Historical CUDA-simulator results are explicitly separated from real GPU measurements."
+    ]
+  },
+  "phase11_distributed": {
+    "cuda_status": "CUDA driver/device unavailable",
+    "simulations": 256,
+    "rows": [
+      {
+        "workers": 1,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 0.9363588780000072,
+        "throughput": 273.3994475994043,
+        "speedup": 1.0,
+        "scaling_efficiency": 1.0
+      },
+      {
+        "workers": 2,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 0.8437109360000079,
+        "throughput": 303.4214552364148,
+        "speedup": 1.1098100522902294,
+        "scaling_efficiency": 0.5549050261451147
+      },
+      {
+        "workers": 4,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 0.9022961979999877,
+        "throughput": 283.72057930360853,
+        "speedup": 1.037751106649371,
+        "scaling_efficiency": 0.25943777666234275
+      },
+      {
+        "workers": 8,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 1.3463019519999904,
+        "throughput": 190.15050793003815,
+        "speedup": 0.6955043603769608,
+        "scaling_efficiency": 0.0869380450471201
+      }
+    ]
+  },
+  "phase12_scheduler": {
+    "jobs": 8,
+    "completed": 8,
+    "failed": 0,
+    "runtime_seconds": 0.0013090929999890477,
+    "assignments": [
+      [
+        "job-2",
+        0
+      ],
+      [
+        "job-5",
+        1
+      ],
+      [
+        "job-1",
+        2
+      ],
+      [
+        "job-4",
+        3
+      ],
+      [
+        "job-7",
+        0
+      ],
+      [
+        "job-0",
+        1
+      ],
+      [
+        "job-3",
+        2
+      ],
+      [
+        "job-6",
+        0
+      ]
+    ]
+  },
+  "phase13_fault_tolerance": {
+    "job_id": "mc-10m",
+    "completed_ranges": [
+      [
+        0,
+        1000
+      ],
+      [
+        2000,
+        3000
+      ]
+    ],
+    "missing_ranges": [
+      [
+        1000,
+        2000
+      ],
+      [
+        3000,
+        4000
+      ]
+    ],
+    "replay_seeds": [
+      855329933,
+      1196885742,
+      978803313,
+      878479408,
+      1792342871
+    ]
+  },
+  "phase14_cost": {
+    "status": "not_run",
+    "reason": "No real GPU price supplied; set F1_GPU_DOLLARS_PER_HOUR.",
+    "rows": []
+  },
+  "phase15_final": {
+    "simulations": 256,
+    "cuda_status": "CUDA driver/device unavailable",
+    "rows": [
+      {
+        "system": "Python CPU",
+        "status": "measured",
+        "runtime_seconds": 0.14112355800000387,
+        "throughput": 1814.013220953464
+      },
+      {
+        "system": "NumPy CPU",
+        "status": "measured",
+        "runtime_seconds": 0.017167380000003618,
+        "throughput": 14912.001714877055
+      },
+      {
+        "system": "CUDA baseline",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      },
+      {
+        "system": "Optimized CUDA",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      },
+      {
+        "system": "Triton",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      },
+      {
+        "system": "Multi-GPU",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      }
+    ]
+  }
+}

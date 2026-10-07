@@ -1,0 +1,42 @@
+{
+  "environment": {
+    "mode": "NUMBA_ENABLE_CUDASIM=1",
+    "hardware": "CPU software simulator, not a CUDA GPU",
+    "warning": "These timings are software-level kernel semantics evidence only and must not be interpreted as GPU performance."
+  },
+  "baseline_before_optimization": {
+    "four_driver_8_races_kernel_seconds": 0.06887552300008792,
+    "host_to_device_seconds": 0.00010242499990908982,
+    "device_to_host_seconds": 0.00004187399997590546,
+    "host_to_device_bytes": 1568,
+    "device_to_host_bytes": 10240
+  },
+  "current_profile": {
+    "four_driver_8_races_kernel_seconds": 0.07229701400001431,
+    "host_to_device_seconds": 0.00012254500006747548,
+    "device_to_host_seconds": 0.00003773699995690549,
+    "host_to_device_bytes": 576,
+    "device_to_host_bytes": 616,
+    "sort_comparisons": 1440,
+    "estimated_rng_draws": 3360
+  },
+  "driver_scaling_probe": [
+    {"drivers": 1, "kernel_seconds": 0.03466532199990979, "sort_comparisons": 0},
+    {"drivers": 2, "kernel_seconds": 0.0425540070000352, "sort_comparisons": 240},
+    {"drivers": 4, "kernel_seconds": 0.06963482400010435, "sort_comparisons": 1440}
+  ],
+  "deterministic_noise_optimization": {
+    "before_kernel_seconds": 0.07437215200002356,
+    "after_kernel_seconds": 0.044707016999836924,
+    "improvement_percent": 39.88967599885221,
+    "repeats_after_seconds": [0.046614680999937264, 0.044041559999868696, 0.044707016999836924]
+  },
+  "persistent_context_transfer_optimization": {
+    "before_host_to_device_bytes": 1536,
+    "after_host_to_device_bytes": 1072,
+    "bytes_reduction_percent": 30.20833333333333,
+    "before_host_to_device_seconds": 0.00007283999991614,
+    "after_host_to_device_seconds": 0.00001996000003146036,
+    "component_time_reduction_percent": 72.58825801618804
+  }
+}

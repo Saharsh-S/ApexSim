@@ -1,0 +1,133 @@
+{
+  "candidates": 1000,
+  "simulations_per_strategy": 100,
+  "total_simulations": 100000,
+  "cuda_status": "CUDA driver/device unavailable",
+  "numpy": {
+    "runtime_seconds": 10.50807101800001,
+    "strategies_per_second": 95.16494495393398,
+    "simulations_per_second": 9516.4944953934,
+    "top10": [
+      {
+        "rank": 1,
+        "candidate_id": 599,
+        "strategy_id": "soft@0-hard@15|pace=0.9649|risk=0.322",
+        "expected_finishing_position": 1.12,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2794.820430853551,
+        "risk": 0.3215556345506657,
+        "expected_tire_usage": 2.0,
+        "expected_pit_stops": 1.0
+      },
+      {
+        "rank": 2,
+        "candidate_id": 455,
+        "strategy_id": "hard@0-soft@24|pace=0.9747|risk=0.229",
+        "expected_finishing_position": 1.9,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2798.779254098279,
+        "risk": 0.22865106826061043,
+        "expected_tire_usage": 2.0,
+        "expected_pit_stops": 1.0
+      },
+      {
+        "rank": 3,
+        "candidate_id": 559,
+        "strategy_id": "soft@0-hard@13|pace=0.9762|risk=0.332",
+        "expected_finishing_position": 1.13,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2756.462909094484,
+        "risk": 0.3318294129071354,
+        "expected_tire_usage": 2.0,
+        "expected_pit_stops": 1.0
+      },
+      {
+        "rank": 4,
+        "candidate_id": 909,
+        "strategy_id": "soft@0-medium@9-hard@16|pace=0.9789|risk=0.678",
+        "expected_finishing_position": 3.29,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2793.5631746281397,
+        "risk": 0.678354199530724,
+        "expected_tire_usage": 3.0,
+        "expected_pit_stops": 2.0
+      },
+      {
+        "rank": 5,
+        "candidate_id": 648,
+        "strategy_id": "medium@0-soft@8-hard@23|pace=0.9993|risk=0.306",
+        "expected_finishing_position": 3.23,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2714.2940605128247,
+        "risk": 0.3058608661892308,
+        "expected_tire_usage": 3.0,
+        "expected_pit_stops": 2.0
+      },
+      {
+        "rank": 6,
+        "candidate_id": 467,
+        "strategy_id": "soft@0-hard@25|pace=1.0171|risk=0.985",
+        "expected_finishing_position": 2.38,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2779.6010670609185,
+        "risk": 0.9846149766496523,
+        "expected_tire_usage": 2.0,
+        "expected_pit_stops": 1.0
+      },
+      {
+        "rank": 7,
+        "candidate_id": 920,
+        "strategy_id": "soft@0-medium@9-hard@16|pace=0.9777|risk=0.367",
+        "expected_finishing_position": 3.32,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2760.9367691988696,
+        "risk": 0.3667382533649858,
+        "expected_tire_usage": 3.0,
+        "expected_pit_stops": 2.0
+      },
+      {
+        "rank": 8,
+        "candidate_id": 938,
+        "strategy_id": "hard@0-medium@5-soft@18|pace=0.9961|risk=0.794",
+        "expected_finishing_position": 3.37,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2696.984170505298,
+        "risk": 0.7939547430064233,
+        "expected_tire_usage": 3.0,
+        "expected_pit_stops": 2.0
+      },
+      {
+        "rank": 9,
+        "candidate_id": 665,
+        "strategy_id": "medium@0-hard@12-soft@23|pace=0.9882|risk=0.030",
+        "expected_finishing_position": 3.37,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2616.5534757827395,
+        "risk": 0.030293157486611877,
+        "expected_tire_usage": 3.0,
+        "expected_pit_stops": 2.0
+      },
+      {
+        "rank": 10,
+        "candidate_id": 273,
+        "strategy_id": "hard@0-soft@7-medium@15|pace=0.9821|risk=0.847",
+        "expected_finishing_position": 3.36,
+        "win_probability": 1.0,
+        "podium_probability": 1.0,
+        "expected_race_time": 2795.1702353508585,
+        "risk": 0.8472465243609197,
+        "expected_tire_usage": 3.0,
+        "expected_pit_stops": 2.0
+      }
+    ]
+  }
+}

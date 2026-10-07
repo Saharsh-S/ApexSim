@@ -1,0 +1,84 @@
+{
+  "environment": {
+    "cuda": false,
+    "triton": false
+  },
+  "workloads": [
+    {
+      "simulations": 10000,
+      "cpu": {
+        "status": "measured",
+        "runtime_seconds": 0.19670461199984857,
+        "simulations_per_second": 50837.648890549135,
+        "statistics": {
+          "mean": 94.40844091739655,
+          "median": 89.78606414794922,
+          "std": 6.390458294140003,
+          "p05": 88.9390712738037,
+          "p95": 105.12469215393067
+        }
+      },
+      "cuda": {
+        "status": "not_run",
+        "reason": "CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      },
+      "triton": {
+        "status": "not_run",
+        "reason": "Triton/CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      }
+    },
+    {
+      "simulations": 100000,
+      "cpu": {
+        "status": "measured",
+        "runtime_seconds": 1.9904360600000928,
+        "simulations_per_second": 50240.24735564494,
+        "statistics": {
+          "mean": 94.40751286323547,
+          "median": 89.78916549682617,
+          "std": 6.393568555511243,
+          "p05": 88.93652229309082,
+          "p95": 105.11737060546875
+        }
+      },
+      "cuda": {
+        "status": "not_run",
+        "reason": "CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      },
+      "triton": {
+        "status": "not_run",
+        "reason": "Triton/CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      }
+    },
+    {
+      "simulations": 1000000,
+      "cpu": {
+        "status": "not_run",
+        "reason": "Benchmark uses chunked GPU execution for large workloads; Python reference hot-slice execution is intentionally bounded."
+      },
+      "cuda": {
+        "status": "not_run",
+        "reason": "CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      },
+      "triton": {
+        "status": "not_run",
+        "reason": "Triton/CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      }
+    },
+    {
+      "simulations": 10000000,
+      "cpu": {
+        "status": "not_run",
+        "reason": "Benchmark uses chunked GPU execution for large workloads; Python reference hot-slice execution is intentionally bounded."
+      },
+      "cuda": {
+        "status": "not_run",
+        "reason": "CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      },
+      "triton": {
+        "status": "not_run",
+        "reason": "Triton/CUDA device unavailable or workload exceeds bounded single-batch benchmark size."
+      }
+    }
+  ]
+}

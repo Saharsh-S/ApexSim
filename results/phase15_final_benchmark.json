@@ -1,0 +1,46 @@
+{
+  "simulations": 256,
+  "cuda_status": "CUDA driver/device unavailable",
+  "rows": [
+    {
+      "system": "Python CPU",
+      "status": "measured",
+      "runtime_seconds": 0.1455168910001703,
+      "throughput": 1759.2459421064764
+    },
+    {
+      "system": "NumPy CPU",
+      "status": "measured",
+      "runtime_seconds": 0.017614215999856242,
+      "throughput": 14533.715267377744
+    },
+    {
+      "system": "CUDA baseline",
+      "status": "not_run",
+      "runtime_seconds": null,
+      "throughput": null,
+      "reason": "CUDA driver/device unavailable"
+    },
+    {
+      "system": "Optimized CUDA",
+      "status": "not_run",
+      "runtime_seconds": null,
+      "throughput": null,
+      "reason": "CUDA driver/device unavailable"
+    },
+    {
+      "system": "Triton",
+      "status": "not_run",
+      "runtime_seconds": null,
+      "throughput": null,
+      "reason": "CUDA driver/device unavailable"
+    },
+    {
+      "system": "Multi-GPU",
+      "status": "not_run",
+      "runtime_seconds": null,
+      "throughput": null,
+      "reason": "CUDA driver/device unavailable"
+    }
+  ]
+}

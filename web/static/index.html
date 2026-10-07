@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <title>F1 Strategy Lab</title>
+  <meta name="description" content="Real-time F1 strategy simulation and ML systems performance lab.">
+  <link rel="stylesheet" href="/static/styles.css?v=4">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="app-shell">
+    <header class="nav">
+      <a class="logo" href="#top"><span class="logo-f1">F1</span><span>STRATEGY LAB</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#strategy">Strategy</a><a href="#simulator">Simulator</a><a href="#performance">Performance</a><a href="#research">Research</a>
+      </nav>
+      <div id="statusPill" class="status-pill"><span class="status-dot"></span><span>CONNECTING</span></div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span>REAL-TIME RACE STRATEGY · ML SYSTEMS</div>
+          <h1>Make the next<br><span>race decision.</span></h1>
+          <p>Explore strategy search, Monte Carlo simulation, ML inference, and the systems that make low-latency decisions possible.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#strategy">Open strategy engine <b>↗</b></a><a class="btn btn-ghost" href="#performance">Explore performance</a></div>
+          <div class="hero-meta"><span><i></i> Backend online</span><span>CPU fallback supported</span><span>No fabricated GPU results</span></div>
+        </div>
+        <div class="hero-telemetry card">
+          <div class="card-top"><span>RACE STATE</span><span class="live"><i></i> READY</span></div>
+          <div class="race-number"><strong id="heroLap">37</strong><div><span>LAP</span><b>P4</b></div></div>
+          <div class="telemetry-grid">
+            <div><small>TYRE</small><strong id="heroTire">MEDIUM</strong></div><div><small>RAIN</small><strong id="heroRain">62%</strong></div>
+            <div><small>GAP AHEAD</small><strong>+2.4s</strong></div><div><small>GAP BEHIND</small><strong>+1.8s</strong></div>
+          </div>
+          <div class="telemetry-callout"><small>NEXT DECISION</small><strong id="heroRecommendation">READY TO EVALUATE</strong><span>Strategy engine connected to the simulator</span></div>
+        </div>
+      </section>
+
+      <section id="strategy" class="section-pad section-block">
+        <div class="section-intro"><div><div class="eyebrow">01 · REAL-TIME ENGINE</div><h2>What should the driver do next?</h2></div><p>Give the engine the current race state. It generates candidate futures, evaluates them, and returns the strongest continuation.</p></div>
+        <div class="strategy-layout">
+          <form id="strategyForm" class="card form-card">
+            <div class="form-title"><span>RACE STATE</span><span class="step">LIVE INPUT</span></div>
+            <div class="form-grid">
+              <label>Lap<input id="lap" type="number" value="37" min="1" max="59"></label>
+              <label>Position<select id="position"><option>1</option><option>2</option><option>3</option><option selected>4</option></select></label>
+              <label>Current tyre<select id="tire"><option>soft</option><option selected>medium</option><option>hard</option><option>intermediate</option><option>wet</option></select></label>
+              <label>Tyre age<input id="tireAge" type="number" value="18" min="0" max="60"></label>
+              <label>Gap ahead<input id="gapAhead" type="number" step="0.1" value="2.4" min="0"><em>seconds</em></label>
+              <label>Gap behind<input id="gapBehind" type="number" step="0.1" value="1.8" min="0"><em>seconds</em></label>
+              <label class="range-label">Rain probability<output id="rainOut">62%</output><input id="rain" type="range" value="62" min="0" max="100"></label>
+              <label class="range-label">Safety car probability<output id="scOut">15%</output><input id="sc" type="range" value="15" min="0" max="100"></label>
+            </div>
+            <div class="advanced-row"><label>Evaluation<select id="backend"><option value="simulation" selected>Monte Carlo simulation</option><option value="surrogate">ML surrogate</option></select></label><label>Candidates<input id="candidates" type="number" value="32" min="4" max="128"></label></div>
+            <button id="strategyBtn" class="btn btn-primary full" type="submit"><span>Evaluate strategy</span><b>→</b></button>
+            <p class="form-note">ML surrogate uses the bundled model when its runtime is available; otherwise the app automatically falls back to Monte Carlo simulation.</p>
+          </form>
+
+          <div id="strategyResult" class="card result-card empty">
+            <div class="result-placeholder"><div class="placeholder-ring">◎</div><div><span>AWAITING RACE STATE</span><p>Run the strategy engine to see the recommended pit window, expected finish, confidence, and alternatives.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="simulator" class="section-pad section-block">
+        <div class="section-intro"><div><div class="eyebrow">02 · MONTE CARLO</div><h2>Test a strategy against uncertainty.</h2></div><p>Run repeated races using the same simulation stack behind the research benchmarks.</p></div>
+        <div class="sim-layout">
+          <form id="simForm" class="card form-card compact-form">
+            <div class="form-title"><span>SIMULATION</span><span class="step">DETERMINISTIC SEED</span></div>
+            <label>Starting tyre<select id="simTire"><option>soft</option><option selected>medium</option><option>hard</option></select></label>
+            <div class="form-grid"><label>Pit lap<input id="pitLap" type="number" value="15" min="1" max="59"></label><label>Second tyre<select id="secondTire"><option>soft</option><option selected>hard</option><option>medium</option></select></label></div>
+            <label>Simulations<input id="sims" type="number" value="100" min="1" max="2000"></label>
+            <button id="simBtn" class="btn btn-light full" type="submit"><span>Run Monte Carlo</span><b>→</b></button>
+            <p class="form-note">Results are generated live by the backend. Increase simulations for a more stable estimate.</p>
+          </form>
+          <div id="simResult" class="card sim-result empty"><div class="empty-inline">Run a simulation to populate the outcome metrics.</div></div>
+        </div>
+      </section>
+
+      <section id="performance" class="performance-section">
+        <div class="section-pad">
+          <div class="section-intro light"><div><div class="eyebrow">03 · SYSTEM PERFORMANCE</div><h2>Measure the machinery.</h2></div><p>Live benchmark artifacts are shown below. Unavailable hardware stays explicitly unavailable.</p></div>
+          <div id="performanceGrid" class="perf-grid"><div class="loading-card">Loading measured benchmark data…</div></div>
+          <div class="scaling-card card-dark">
+            <div><div class="eyebrow">DISTRIBUTED SCALING</div><h3 id="scalingTitle">Worker scaling</h3><p id="scalingNote">Loading worker study…</p></div>
+            <div id="scalingBars" class="scaling-bars"></div>
+          </div>
+          <div class="pipeline-card card-dark"><div><div class="eyebrow">EXECUTION PATH</div><h3>Browser → API → strategy engine → simulation / ML → ranked decision</h3></div><div class="pipeline"><span>WEB</span><b>→</b><span>FASTAPI</span><b>→</b><span>SEARCH</span><b>→</b><span>CPU / GPU</span><b>→</b><span>RESULT</span></div></div>
+        </div>
+      </section>
+
+      <section id="research" class="section-pad section-block research-section">
+        <div class="research-number">04</div><div><div class="eyebrow">RESEARCH PLATFORM</div><h2>F1 is the workload.<br><span>ML systems are the subject.</span></h2><p>The underlying project studies CPU vectorization, CUDA, Triton, surrogate modeling, real-time inference, distributed simulation, scheduling, fault tolerance, and cost-aware execution.</p><div class="research-links"><a href="/docs" target="_blank">Open API docs ↗</a><a href="/api/system" target="_blank">System status ↗</a></div></div>
+      </section>
+    </main>
+    <footer class="section-pad"><span>F1 STRATEGY LAB</span><span>Execution-dependent measurements · Research build</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/app.js?v=4"></script>
+</body>
+</html>

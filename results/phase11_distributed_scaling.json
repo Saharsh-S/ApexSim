@@ -1,0 +1,38 @@
+{
+  "cuda_status": "CUDA driver/device unavailable",
+  "simulations": 256,
+  "rows": [
+    {
+      "workers": 1,
+      "backend": "numpy-fallback",
+      "runtime_seconds": 0.8279477969999789,
+      "throughput": 309.19823801404056,
+      "speedup": 1.0,
+      "scaling_efficiency": 1.0
+    },
+    {
+      "workers": 2,
+      "backend": "numpy-fallback",
+      "runtime_seconds": 0.8168511240000953,
+      "throughput": 313.39860162813477,
+      "speedup": 1.0135846945347196,
+      "scaling_efficiency": 0.5067923472673598
+    },
+    {
+      "workers": 4,
+      "backend": "numpy-fallback",
+      "runtime_seconds": 1.019660617000227,
+      "throughput": 251.06392826383234,
+      "speedup": 0.8119836965320341,
+      "scaling_efficiency": 0.20299592413300852
+    },
+    {
+      "workers": 8,
+      "backend": "numpy-fallback",
+      "runtime_seconds": 1.3150147629999083,
+      "throughput": 194.67462054645986,
+      "speedup": 0.6296110281767511,
+      "scaling_efficiency": 0.07870137852209388
+    }
+  ]
+}

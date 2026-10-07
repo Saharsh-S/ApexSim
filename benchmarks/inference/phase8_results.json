@@ -1,0 +1,222 @@
+[
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 1,
+    "latency_ms": 3.8198573320000833,
+    "throughput": 261.7898819473445,
+    "memory_mb": null
+  },
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 8,
+    "latency_ms": 3.9799743079997825,
+    "throughput": 2010.063226770065,
+    "memory_mb": null
+  },
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 32,
+    "latency_ms": 3.8904203420001977,
+    "throughput": 8225.332274390616,
+    "memory_mb": null
+  },
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 128,
+    "latency_ms": 4.289175195000098,
+    "throughput": 24013.940983354412,
+    "memory_mb": null
+  },
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 512,
+    "latency_ms": 4.42645750000338,
+    "throughput": 23269.17179254999,
+    "memory_mb": null
+  },
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 1024,
+    "latency_ms": 4.184342580001612,
+    "throughput": 24615.575333690846,
+    "memory_mb": null
+  },
+  {
+    "backend": "xgboost_cpu",
+    "batch_size": 4096,
+    "latency_ms": 4.240608529999008,
+    "throughput": 24288.966847883996,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 1,
+    "latency_ms": 0.01875494999694638,
+    "throughput": 53319.25705815354,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 8,
+    "latency_ms": 0.025877220000438683,
+    "throughput": 309152.21959176374,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 32,
+    "latency_ms": 0.03181909999966592,
+    "throughput": 1005685.2645214973,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 128,
+    "latency_ms": 0.03572161000192864,
+    "throughput": 3583265.143790808,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 512,
+    "latency_ms": 0.036886249995404796,
+    "throughput": 13880511.03226226,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 1024,
+    "latency_ms": 0.03400139999030216,
+    "throughput": 30116406.980067413,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch",
+    "device": "cpu",
+    "batch_size": 4096,
+    "latency_ms": 0.03681414998482069,
+    "throughput": 111261566.59026146,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 1,
+    "latency_ms": 0.02067545500040069,
+    "throughput": 48366.52929672503,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 8,
+    "latency_ms": 0.03121969999938301,
+    "throughput": 256248.458510431,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 32,
+    "latency_ms": 0.06723660000034215,
+    "throughput": 475931.2636248287,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 128,
+    "latency_ms": 0.166276324998762,
+    "throughput": 619450.7847149429,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 512,
+    "latency_ms": 0.15787666666255973,
+    "throughput": 652407.9978211647,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 1024,
+    "latency_ms": 0.7375262999933815,
+    "throughput": 139656.03667411496,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_fp16",
+    "batch_size": 4096,
+    "latency_ms": 0.14340346666964857,
+    "throughput": 718253.208182728,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 1,
+    "latency_ms": 0.020753980002155004,
+    "throughput": 48183.52913013139,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 8,
+    "latency_ms": 0.04629979499895853,
+    "throughput": 172786.94214909486,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 32,
+    "latency_ms": 0.06751727499931803,
+    "throughput": 473952.77727549314,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 128,
+    "latency_ms": 0.07439025999929072,
+    "throughput": 1384589.8643314603,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 512,
+    "latency_ms": 0.09242839999690962,
+    "throughput": 1114376.1008893787,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 1024,
+    "latency_ms": 0.07839083333844125,
+    "throughput": 1313929.1370371352,
+    "memory_mb": null
+  },
+  {
+    "backend": "pytorch_bf16",
+    "batch_size": 4096,
+    "latency_ms": 0.0683863999862903,
+    "throughput": 1506147.4214266117,
+    "memory_mb": null
+  },
+  {
+    "backend": "onnx",
+    "status": {
+      "available": false,
+      "reason": "No module named 'onnx'"
+    }
+  },
+  {
+    "backend": "tensorrt",
+    "available": false,
+    "reason": "No module named 'tensorrt'"
+  },
+  {
+    "backend": "triton",
+    "available": false,
+    "reason": "No module named 'triton'"
+  }
+]

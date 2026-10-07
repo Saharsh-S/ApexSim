@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "f1-gpu-race-simulator"
+version = "0.1.0"
+description = "Deterministic CPU reference simulator for GPU-accelerated F1 strategy simulation."
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "matplotlib>=3.7,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+gpu = ["numba>=0.60,<1"]
+triton = ["triton>=3.0,<4"]
+ml = ["pandas>=2.0,<3", "xgboost>=2,<4", "torch>=2,<3", "joblib>=1.3,<2"]
+inference = ["onnx>=1.16,<2", "onnxruntime>=1.18,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]

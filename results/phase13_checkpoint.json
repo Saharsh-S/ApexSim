@@ -1,0 +1,19 @@
+{
+  "job_id": "mc-10m",
+  "completed_ranges": [
+    [
+      0,
+      1000
+    ],
+    [
+      2000,
+      3000
+    ]
+  ],
+  "failed_workers": [
+    3
+  ],
+  "metadata": {
+    "seed": 42
+  }
+}

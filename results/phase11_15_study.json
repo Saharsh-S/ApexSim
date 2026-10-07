@@ -1,0 +1,131 @@
+{
+  "phase11_distributed": {
+    "cuda_status": "CUDA driver/device unavailable",
+    "simulations": 256,
+    "rows": [
+      {
+        "workers": 1,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 0.8837079030000012,
+        "throughput": 289.6884809233166,
+        "speedup": 1.0,
+        "scaling_efficiency": 1.0
+      },
+      {
+        "workers": 2,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 0.8503838710000053,
+        "throughput": 301.0405167950303,
+        "speedup": 1.039187046152238,
+        "scaling_efficiency": 0.519593523076119
+      },
+      {
+        "workers": 4,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 0.9240658599999989,
+        "throughput": 277.0365307078873,
+        "speedup": 0.9563256703369631,
+        "scaling_efficiency": 0.23908141758424079
+      },
+      {
+        "workers": 8,
+        "backend": "numpy-fallback",
+        "runtime_seconds": 1.4533705799999979,
+        "throughput": 176.14227473904168,
+        "speedup": 0.6080403134347212,
+        "scaling_efficiency": 0.07600503917934015
+      }
+    ]
+  },
+  "phase12_scheduler": {
+    "jobs": 8,
+    "completed": 8,
+    "failed": 0,
+    "runtime_seconds": 0.0011370480000039151,
+    "assignments": [
+      [
+        "job-2",
+        0
+      ],
+      [
+        "job-5",
+        1
+      ],
+      [
+        "job-1",
+        2
+      ],
+      [
+        "job-4",
+        3
+      ],
+      [
+        "job-7",
+        0
+      ],
+      [
+        "job-0",
+        1
+      ],
+      [
+        "job-3",
+        2
+      ],
+      [
+        "job-6",
+        0
+      ]
+    ]
+  },
+  "phase14_cost": {
+    "status": "not_run",
+    "reason": "No real GPU price supplied; set F1_GPU_DOLLARS_PER_HOUR.",
+    "rows": []
+  },
+  "phase15_final": {
+    "simulations": 256,
+    "cuda_status": "CUDA driver/device unavailable",
+    "rows": [
+      {
+        "system": "Python CPU",
+        "status": "measured",
+        "runtime_seconds": 0.13976295500000901,
+        "throughput": 1831.6727776683276
+      },
+      {
+        "system": "NumPy CPU",
+        "status": "measured",
+        "runtime_seconds": 0.017264875000009283,
+        "throughput": 14827.793424502775
+      },
+      {
+        "system": "CUDA baseline",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      },
+      {
+        "system": "Optimized CUDA",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      },
+      {
+        "system": "Triton",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      },
+      {
+        "system": "Multi-GPU",
+        "status": "not_run",
+        "runtime_seconds": null,
+        "throughput": null,
+        "reason": "CUDA driver/device unavailable"
+      }
+    ]
+  }
+}

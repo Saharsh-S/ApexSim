@@ -1,0 +1,79 @@
+[
+  {
+    "implementation": "python_cpu",
+    "status": "measured",
+    "runtime_s": 0.6964931339999936,
+    "throughput_sims_s": 1435.764333033625,
+    "latency_ms_per_sim": 0.6964931339999936,
+    "cpu_util_percent": 19.813547795864025,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  },
+  {
+    "implementation": "numpy_cpu",
+    "status": "measured",
+    "runtime_s": 0.06971745600000645,
+    "throughput_sims_s": 14343.610013536745,
+    "latency_ms_per_sim": 0.06971745600000645,
+    "cpu_util_percent": 20.081054018951527,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  },
+  {
+    "implementation": "cuda_optimized",
+    "status": "not_run",
+    "runtime_s": null,
+    "throughput_sims_s": null,
+    "latency_ms_per_sim": null,
+    "cpu_util_percent": null,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  },
+  {
+    "implementation": "pytorch_fp32",
+    "status": "measured",
+    "runtime_s": 2.541750399998932e-05,
+    "throughput_sims_s": 39342.96617010152,
+    "latency_ms_per_sim": 0.02541750399998932,
+    "cpu_util_percent": null,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  },
+  {
+    "implementation": "pytorch_fp16",
+    "status": "measured",
+    "runtime_s": 3.137731199998939e-05,
+    "throughput_sims_s": 31870.161472096086,
+    "latency_ms_per_sim": 0.03137731199998939,
+    "cpu_util_percent": null,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  },
+  {
+    "implementation": "pytorch_bf16",
+    "status": "measured",
+    "runtime_s": 3.326112600001352e-05,
+    "throughput_sims_s": 30065.127680872665,
+    "latency_ms_per_sim": 0.03326112600001352,
+    "cpu_util_percent": null,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  },
+  {
+    "implementation": "pytorch_batch_fp32",
+    "status": "measured",
+    "runtime_s": 2.4146740000077215e-05,
+    "throughput_sims_s": 41413.45788279504,
+    "latency_ms_per_sim": 0.024146740000077216,
+    "cpu_util_percent": null,
+    "gpu_util_percent": null,
+    "gpu_memory_mb": null,
+    "energy_j": null
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "cuda_status": "CUDA device available",
+  "measurements": [
+    {
+      "label": "four_driver_full",
+      "simulations": 8,
+      "wall_seconds": 0.06791885600000569,
+      "input_encoding_seconds": 0.00012029200001961726,
+      "host_to_device_seconds": 8.99560000107158e-05,
+      "kernel_seconds": 0.06755668899995726,
+      "device_to_host_seconds": 3.5854999850926106e-05,
+      "host_to_device_bytes": 576,
+      "device_to_host_bytes": 616,
+      "sort_comparisons": 1440,
+      "estimated_rng_draws": 3360
+    }
+  ]
+}

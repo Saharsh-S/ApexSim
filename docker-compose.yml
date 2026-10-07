@@ -1,0 +1,8 @@
+services:
+  f1-strategy-lab:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      F1_CORS_ORIGINS: "*"
+    restart: unless-stopped

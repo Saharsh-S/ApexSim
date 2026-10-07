@@ -1,0 +1,36 @@
+{
+  "environment": {
+    "cuda_driver": false,
+    "nvcc": false,
+    "nvidia_smi": false,
+    "nsys": false,
+    "ncu": false,
+    "note": "No NVIDIA GPU/driver/toolchain was exposed by the development environment. GPU performance metrics are therefore not fabricated."
+  },
+  "workloads": [
+    {
+      "simulations": 10000,
+      "cpu": {"status": "measured", "runtime_seconds": 5.712971151000147, "simulations_per_second": 1750.4026776416226},
+      "numpy": {"status": "measured", "runtime_seconds": 0.46281261200010704, "simulations_per_second": 21607.017053367785},
+      "cuda": {"status": "not_run", "reason": "CUDA driver/device unavailable"}
+    },
+    {
+      "simulations": 100000,
+      "cpu": {"status": "not_run", "reason": "A 100K CPU run exceeded the 300-second validation wall-time limit."},
+      "numpy": {"status": "measured", "runtime_seconds": 4.829478870999992, "simulations_per_second": 20706.167822884378},
+      "cuda": {"status": "not_run", "reason": "CUDA driver/device unavailable"}
+    },
+    {
+      "simulations": 1000000,
+      "cpu": {"status": "not_run", "reason": "CPU baseline was not allowed to run for an unbounded multi-minute workload."},
+      "numpy": {"status": "not_run", "reason": "A chunked 1M NumPy run exceeded the 180-second validation wall-time limit in this environment."},
+      "cuda": {"status": "not_run", "reason": "CUDA driver/device unavailable"}
+    },
+    {
+      "simulations": 10000000,
+      "cpu": {"status": "not_run", "reason": "No bounded CPU measurement was available after the 100K baseline exceeded five minutes."},
+      "numpy": {"status": "not_run", "reason": "Not attempted after the bounded 1M NumPy run exceeded three minutes."},
+      "cuda": {"status": "not_run", "reason": "CUDA driver/device unavailable"}
+    }
+  ]
+}
